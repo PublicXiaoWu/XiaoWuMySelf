@@ -1,7 +1,9 @@
-package com.xiaowu.myself;
+package com.xiaowu.myself.main.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.xiaowu.myself.R;
 
 public class FirstActivity extends AppCompatActivity {
 

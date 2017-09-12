@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
-    tools:context="com.xiaowu.myself.FirstActivity">
+    tools:context="com.xiaowu.myself.main.activity.FirstActivity">
 
     <ImageView
         android:layout_width="wrap_content"
