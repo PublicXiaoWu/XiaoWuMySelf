@@ -13,5 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="105dp"
+        android:onClick="go"
         android:src="@mipmap/ic_myself"/>
+
 </RelativeLayout>
