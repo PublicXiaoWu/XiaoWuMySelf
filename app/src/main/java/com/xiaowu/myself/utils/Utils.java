@@ -159,14 +159,14 @@ public class Utils {
         int column = 2;//默认是两列
         switch (context.getResources().getConfiguration().orientation) {
             case Configuration.ORIENTATION_LANDSCAPE:// 横屏
-                if (ScreenUtil.isPad(context)) {//平板
+                if (ScreenUtil.Companion.isPad(context)) {//平板
                     column = 5;
                 } else {
                     column = 3;
                 }
                 break;
             case Configuration.ORIENTATION_PORTRAIT:// 竖屏
-                if (ScreenUtil.isPad(context)) {//平板
+                if (ScreenUtil.Companion.isPad(context)) {//平板
                     column = 3;
                 } else {
                     column = 2;
@@ -186,10 +186,10 @@ public class Utils {
         int width = 0;
         switch (context.getResources().getConfiguration().orientation) {
             case Configuration.ORIENTATION_LANDSCAPE:// 横屏
-                width = (ScreenUtil.getMaxWidthOrHeight(context) / showPhotoColumns(context)) - ScreenUtil.dip2px(context, 40);//每个item左右间距分别是20dp
+                width = (ScreenUtil.Companion.getMaxWidthOrHeight(context) / showPhotoColumns(context)) - ScreenUtil.Companion.dip2px(context, 40);//每个item左右间距分别是20dp
                 break;
             case Configuration.ORIENTATION_PORTRAIT:// 竖屏
-                width = (ScreenUtil.getMinWidthOrHeight(context) / showPhotoColumns(context)) - ScreenUtil.dip2px(context, 40);
+                width = (ScreenUtil.Companion.getMinWidthOrHeight(context) / showPhotoColumns(context)) - ScreenUtil.Companion.dip2px(context, 40);
                 break;
         }
         return width;
@@ -199,11 +199,11 @@ public class Utils {
         int width = 0;
         switch (context.getResources().getConfiguration().orientation) {
             case Configuration.ORIENTATION_LANDSCAPE:// 横屏
-                width = ((ScreenUtil.getMaxWidthOrHeight(context) - ScreenUtil.dip2px(context, padding)) / columns) - ScreenUtil.dip2px(context,
+                width = ((ScreenUtil.Companion.getMaxWidthOrHeight(context) - ScreenUtil.Companion.dip2px(context, padding)) / columns) - ScreenUtil.Companion.dip2px(context,
                         padding);//每个item左右间距分别是20dp
                 break;
             case Configuration.ORIENTATION_PORTRAIT:// 竖屏
-                width = ((ScreenUtil.getMinWidthOrHeight(context) - ScreenUtil.dip2px(context, padding)) / columns) - ScreenUtil.dip2px(context,
+                width = ((ScreenUtil.Companion.getMinWidthOrHeight(context) - ScreenUtil.Companion.dip2px(context, padding)) / columns) - ScreenUtil.Companion.dip2px(context,
                         padding);
                 break;
         }
@@ -220,18 +220,18 @@ public class Utils {
         int column = 3;//默认是两列
         switch (context.getResources().getConfiguration().orientation) {
             case Configuration.ORIENTATION_LANDSCAPE:// 横屏
-                if (ScreenUtil.isPadDevices(context)) {//平板
+                if (ScreenUtil.Companion.isPadDevices(context)) {//平板
                     column = 8;
-                } else if (ScreenUtil.isPhone(context)) {
+                } else if (ScreenUtil.Companion.isPhone(context)) {
                     column = 5;
                 } else {
                     column = 12;
                 }
                 break;
             case Configuration.ORIENTATION_PORTRAIT:// 竖屏
-                if (ScreenUtil.isPadDevices(context)) {//平板
+                if (ScreenUtil.Companion.isPadDevices(context)) {//平板
                     column = 5;
-                } else if (ScreenUtil.isPhone(context)) {
+                } else if (ScreenUtil.Companion.isPhone(context)) {
                     column = 3;
                 } else {
                     column = 8;
@@ -245,10 +245,10 @@ public class Utils {
         int width = 0;
         switch (context.getResources().getConfiguration().orientation) {
             case Configuration.ORIENTATION_LANDSCAPE:// 横屏
-                width = (ScreenUtil.getMaxWidthOrHeight(context) / showCameraColumns(context)) - ScreenUtil.dip2px(context, 2);//每个item左右间距分别是20dp
+                width = (ScreenUtil.Companion.getMaxWidthOrHeight(context) / showCameraColumns(context)) - ScreenUtil.Companion.dip2px(context, 2);//每个item左右间距分别是20dp
                 break;
             case Configuration.ORIENTATION_PORTRAIT:// 竖屏
-                width = (ScreenUtil.getMinWidthOrHeight(context) / showCameraColumns(context)) - ScreenUtil.dip2px(context, 2);
+                width = (ScreenUtil.Companion.getMinWidthOrHeight(context) / showCameraColumns(context)) - ScreenUtil.Companion.dip2px(context, 2);
                 break;
         }
         return width;

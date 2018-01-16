@@ -3,10 +3,6 @@ package com.xiaowu.myself.app.base;
 import android.app.Application;
 import android.content.Context;
 
-/**
- * Created by xiaowumac on 2017/9/8.
- */
-
 public class MyApplication extends Application {
     private static MyApplication instance;
     private static Context context;
