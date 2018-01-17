@@ -1,23 +1,49 @@
 package com.xiaowu.myself.main.activity
 
-import android.app.Activity
+import android.app.FragmentManager
+import android.app.FragmentTransaction
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.os.Bundle
+import android.support.design.widget.TabLayout
 import android.view.View
 
 import com.xiaowu.myself.R
+import com.xiaowu.myself.app.base.BaseActivity
+import com.xiaowu.myself.app.base.BaseFragment
+import com.xiaowu.myself.main.adapter.ApplyAdapter
+import com.xiaowu.myself.main.fragment.FirstFragment
+import kotlinx.android.synthetic.main.activity_first.*
 
 import java.io.File
 
-class FirstActivity : Activity() {
+class FirstActivity : BaseActivity() {
+    var tbList: MutableList<BaseFragment>? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_first)
+    override fun initView() {
+        tbList = ArrayList()
+        //1.MODE_SCROLLABLE模式
+        newapply_tab.tabMode = TabLayout.MODE_SCROLLABLE
     }
+
+    override fun provideContentViewId(): Int =R.layout.activity_first
+
+
+    override fun initData() {
+
+        tbList?.add(FirstFragment())
+        newapply_vp.adapter = ApplyAdapter(supportFragmentManager, tbList)
+        newapply_tab.setupWithViewPager(newapply_vp)
+    }
+
+
+    inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> Unit) {
+        val fragmentTransaction = beginTransaction()
+        fragmentTransaction.func()
+        fragmentTransaction.commit()
+    }
+
 
     fun go(view: View) {
         val intent = Intent(Intent.ACTION_SEND)
