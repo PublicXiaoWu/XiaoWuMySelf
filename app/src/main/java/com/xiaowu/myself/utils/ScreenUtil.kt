@@ -9,12 +9,7 @@ import android.util.DisplayMetrics
 /**
  * @类描述:屏幕相关工具类
  */
-class ScreenUtil private constructor() {
-
-    init {
-        /* cannot be instantiated */
-        throw UnsupportedOperationException("cannot be instantiated")
-    }
+class ScreenUtil  {
 
     companion object {
 

@@ -1,26 +1,23 @@
 package com.xiaowu.myself.main.activity
 
+import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 
 import com.xiaowu.myself.R
 
 import java.io.File
 
-class FirstActivity : AppCompatActivity() {
+class FirstActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first)
-        init()
     }
-
-    private fun init() {}
 
     fun go(view: View) {
         val intent = Intent(Intent.ACTION_SEND)
