@@ -25,7 +25,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 
-public class FirstFragment extends BaseFragment {
+public class TwoFragment extends BaseFragment {
     TextView TV_show;
 
     @Override
@@ -75,7 +75,7 @@ public class FirstFragment extends BaseFragment {
                     @Override
                     public void success(BaseResponseEntity<List<ApplyPage>> listBaseResponseEntity) {
                         List<ApplyPage> data = listBaseResponseEntity.data;
-                        TV_show.setText("数据请求成功，数据个数为：" + data.size());
+                        TV_show.setText("Two数据请求成功，数据个数为：" + data.size());
                     }
 
                     @Override

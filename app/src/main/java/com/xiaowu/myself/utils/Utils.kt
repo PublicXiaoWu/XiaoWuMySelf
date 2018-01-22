@@ -82,10 +82,10 @@ class Utils private constructor() {
          * @param sourceId
          */
         fun loadingImg(mImageView: ImageView, sourceId: Int) {
-            val context = MyApplication.getAppContext()
+            val context = MyApplication?.mContext
             val opt = BitmapFactory.Options()
             opt.inPreferredConfig = Bitmap.Config.RGB_565
-            val `is` = context.resources.openRawResource(sourceId)
+            val `is` = context?.resources?.openRawResource(sourceId)
             mImageView.setImageBitmap(BitmapFactory.decodeStream(`is`, null, opt))
         }
 
@@ -102,10 +102,10 @@ class Utils private constructor() {
          * @param sourceId
          */
         fun loadingImg(mImageButton: ImageButton, sourceId: Int) {
-            val context = MyApplication.getAppContext()
+            val context = MyApplication?.mContext
             val opt = BitmapFactory.Options()
             opt.inPreferredConfig = Bitmap.Config.RGB_565
-            val `is` = context.resources.openRawResource(sourceId)
+            val `is` = context?.resources?.openRawResource(sourceId)
             mImageButton.setImageBitmap(BitmapFactory.decodeStream(`is`, null, opt))
         }
 
@@ -225,15 +225,15 @@ class Utils private constructor() {
 
         //    打开Activity
         fun openActivity(cls: Class<*>) {
-            val intent = Intent(MyApplication.getAppContext(), cls)
+            val intent = Intent(MyApplication?.mContext, cls)
             intent.flags = FLAG_ACTIVITY_NEW_TASK
-            MyApplication.getAppContext().startActivity(intent)
+            MyApplication?.mContext?.startActivity(intent)
         }
 
         //    打开Activity
         fun openActivity(intent: Intent) {
             intent.flags = FLAG_ACTIVITY_NEW_TASK
-            MyApplication.getAppContext().startActivity(intent)
+            MyApplication?.mContext?.startActivity(intent)
         }
 
         // Android获取一个用于打开Html文件的intent
@@ -255,7 +255,7 @@ class Utils private constructor() {
                 .compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*")
 
         fun isEmail(email: CharSequence): Boolean {
-            return  emailer.matcher(email).matches()
+            return emailer.matcher(email).matches()
         }
 
 

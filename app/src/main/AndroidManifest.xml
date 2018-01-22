@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.xiaowu.myself"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiaowu.myself">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".app.base.MyApplication"
         android:allowBackup="true"
@@ -12,14 +13,19 @@
         android:roundIcon="@mipmap/ic_myself"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.activity.FirstActivity"
+        <activity
+            android:name=".main.activity.FirstActivity"
             android:theme="@style/AppThemeNoTitle">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".main.activity.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

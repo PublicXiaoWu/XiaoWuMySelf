@@ -56,6 +56,8 @@ dependencies {
     //引入json转换器，方便将返回的数据转换为json格式
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    //圆形图片https://github.com/RaphetS/RoundImageView
+    compile 'org.raphets:roundimageview:1.2.0'
 }
 repositories {
     mavenCentral()

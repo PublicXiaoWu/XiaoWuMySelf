@@ -15,17 +15,26 @@ class ApplyAdapter(fm: FragmentManager, private val mFragments: List<BaseFragmen
     }
 
     override fun getCount(): Int {
-        return mFragments?.size?:0
+        return mFragments?.size ?: 0
     }
 
     override fun getPageTitle(position: Int): CharSequence {
-        return when(position) {
-            0 ->{ "全部"}
-            1 ->{"待处理"}
-            2 ->{"待发货"}
-            3 -> {"已发货"}
-            4 -> {"已签收"}
-            else ->{  "申请失败"}
+        return when (position) {
+            0 -> {
+                "首页"
+            }
+            1 -> {
+                "优选"
+            }
+            2 -> {
+                "订单"
+            }
+            3 -> {
+                "收益"
+            }
+            else -> {
+                "我的"
+            }
 
         }
     }

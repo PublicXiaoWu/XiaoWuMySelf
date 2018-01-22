@@ -43,8 +43,9 @@ public class StringUtils {
      * @返回值:boolean
      */
     public static boolean isEmpty(CharSequence input) {
-        if ((input == null) || "".equals(input))
+        if ((input == null) || "".equals(input)) {
             return true;
+        }
 
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
@@ -137,8 +138,9 @@ public class StringUtils {
      * @返回值:int转换异常返回 0
      */
     public static int toInt(Object obj) {
-        if (obj == null)
+        if (obj == null) {
             return 0;
+        }
         return toInt(obj.toString(), 0);
     }
 
@@ -283,12 +285,13 @@ public class StringUtils {
         String paramDate = dateFormater2.get().format(time);
         if (curDate.equals(paramDate)) {
             int hour = (int) ((cal.getTimeInMillis() - time.getTime()) / 3600000);
-            if (hour == 0)
+            if (hour == 0) {
                 ftime = Math.max(
                         (cal.getTimeInMillis() - time.getTime()) / 60000, 1)
                         + "分钟前";
-            else
+            } else {
                 ftime = hour + "小时前";
+            }
             return ftime;
         }
 
@@ -297,12 +300,13 @@ public class StringUtils {
         int days = (int) (ct - lt);
         if (days == 0) {
             int hour = (int) ((cal.getTimeInMillis() - time.getTime()) / 3600000);
-            if (hour == 0)
+            if (hour == 0) {
                 ftime = Math.max(
                         (cal.getTimeInMillis() - time.getTime()) / 60000, 1)
                         + "分钟前";
-            else
+            } else {
                 ftime = hour + "小时前";
+            }
         } else if (days == 1) {
             ftime = "昨天";
         } else if (days == 2) {
@@ -388,7 +392,7 @@ public class StringUtils {
     }
 
     public static String getStringfromResource(int ResourceId) {
-        Context context = MyApplication.getAppContext();
+        Context context = MyApplication.Companion.getMContext();
         return context.getResources().getString(ResourceId);
     }
 
@@ -411,10 +415,11 @@ public class StringUtils {
 
     //将double转成一个正整数，小于零就直接等于0
     public static double toPositiveInteger(double v) {
-        if (v < 0)
+        if (v < 0) {
             return 0;
-        else
+        } else {
             return v;
+        }
     }
 }
 
