@@ -25,6 +25,9 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 
+/**
+ * @author LSX
+ */
 public class FirstFragment extends BaseFragment {
     TextView TV_show;
 

@@ -2,7 +2,6 @@ package com.xiaowu.myself.main.fragment
 
 import android.content.Context
 
-
 /**
  * Explanation：
  * @author LSX
@@ -26,7 +25,7 @@ class FragmentFactory private constructor(context: Context) {
     }
 
     private var firstFragment: FirstFragment? = null
-    private var twoFragment: TwoFragment? = null
+    private var userFragment: UserFragment? = null
     private var threefragment: ShoppingOnlineFragment? = null
 
     /**
@@ -44,15 +43,15 @@ class FragmentFactory private constructor(context: Context) {
     }  /**
      * 首页
      */
-    fun getTwoFragment(): TwoFragment {
-        if (twoFragment == null) {
+    fun getTwoFragment(): UserFragment {
+        if (userFragment == null) {
             synchronized(FirstFragment::class) {
-                if (twoFragment == null) {
-                    twoFragment = TwoFragment()
+                if (userFragment == null) {
+                    userFragment = UserFragment()
                 }
             }
         }
-        return twoFragment!!
+        return userFragment!!
     }  /**
      * 首页
      */
