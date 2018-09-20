@@ -21,7 +21,7 @@ import com.xiaowu.myself.R;
  * 邮箱：zhanghuaiha@gmail.com
  */
 
-public class DrawableTextView extends TextView {
+public class DrawableTextView extends android.support.v7.widget.AppCompatTextView {
     public static final String TAG = "DrawableTextView";
 
     public static final int LEFT = 1, TOP = 2, RIGHT = 3, BOTTOM = 4;

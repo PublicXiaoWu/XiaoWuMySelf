@@ -87,6 +87,7 @@ public final class SystemTool {
      * @方法名称:getPhoneIMEI
      * @返回值:String
      */
+    @SuppressLint("MissingPermission")
     public static String getPhoneIMEI(Context cxt) {
         TelephonyManager tm = (TelephonyManager) cxt.getSystemService(Context.TELEPHONY_SERVICE);
         return tm.getDeviceId();
