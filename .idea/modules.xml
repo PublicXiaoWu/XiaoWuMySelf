@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/XiaoWuMySelf.iml" filepath="$PROJECT_DIR$/XiaoWuMySelf.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/myself.iml" filepath="$PROJECT_DIR$/myself.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commonclass/commonclass.iml" filepath="$PROJECT_DIR$/commonclass/commonclass.iml" />
     </modules>
   </component>
 </project>
