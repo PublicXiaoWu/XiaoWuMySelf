@@ -8,6 +8,7 @@ import android.net.NetworkInfo
 /**
  * Created by lvruheng on 2017/7/2.
  */
+
 object NetworkUtils{
 
     @SuppressLint("MissingPermission")
@@ -29,10 +30,10 @@ object NetworkUtils{
         }
         val connectManager  = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkInfo : NetworkInfo = connectManager.getNetworkInfo(typeMoblie)
-        if(networkInfo==null){
-            return false
+        return if(networkInfo==null){
+            false
         }else{
-            return  networkInfo.isConnected && networkInfo.isAvailable
+            networkInfo.isConnected && networkInfo.isAvailable
         }
     }
 
