@@ -31,8 +31,8 @@ dependencies {
 publish {
     userOrg = 'davidiainvolucrata'             // Binary用户名
     repoName = 'XiaoWuMySelf'          // Binary上的刚才新建的仓库名（Repository）
-    groupId = 'x'        // 依赖名compile 'x:y:z'中的包名x
-    artifactId = 'y'        // 依赖名compile 'x:y:z'中的项目名y
+    groupId = 'davidiainvolucrata'        // 依赖名compile 'x:y:z'中的包名x
+    artifactId = 'common_class'        // 依赖名compile 'x:y:z'中的项目名y
     publishVersion = '1.0.0'          // 依赖名compile 'x:y:z'中的版本号z
     desc = 'a xiaowu private class '            // 对该开源组件的说明
     website = 'https://github.com/PublicXiaoWu/XiaoWuMySelf'  // VCS地址，即填写项目上传的Github地址

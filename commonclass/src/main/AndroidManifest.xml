@@ -1,2 +1,4 @@
 <manifest package="com.xiaowu.commonclass"
-/>
+>
+    <uses-permission name="android.permission.ACCESS_NETWORK_STATE"/>
+</manifest>
