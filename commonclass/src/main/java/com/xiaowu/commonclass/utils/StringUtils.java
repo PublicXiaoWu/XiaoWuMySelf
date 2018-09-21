@@ -15,6 +15,8 @@ import java.util.Locale;
 import java.util.TimeZone;
 import java.util.regex.Pattern;
 
+import static android.text.TextUtils.isEmpty;
+
 /**
  * @类名:StringUtils
  * @类描述:字符串操作工具包
@@ -30,26 +32,6 @@ public class StringUtils {
     private final static Pattern phone = Pattern
             .compile("^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$");
 
-    /**
-     * @param input
-     * @return
-     * @方法说明:判断给定字符串是否空白串 空白串是指由空格、制表符、回车符、换行符组成的字符串 若输入字符串为null或空字符串，返回true
-     * @方法名称:isEmpty
-     * @返回值:boolean
-     */
-    public static boolean isEmpty(CharSequence input) {
-        if ((input == null) || "".equals(input)) {
-            return true;
-        }
-
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
-            if ((c != ' ') && (c != '\t') && (c != '\r') && (c != '\n')) {
-                return false;
-            }
-        }
-        return true;
-    }
 
 
     /**
@@ -62,6 +44,7 @@ public class StringUtils {
     public static boolean isEmail(CharSequence email) {
         return !isEmpty(email) && emailer.matcher(email).matches();
     }
+
 
 
     /**
@@ -326,7 +309,7 @@ public class StringUtils {
     public static String MstoDate(String time) {
         String str = "";
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        if (!TextUtils.isEmpty(time)) {
+        if (!isEmpty(time)) {
             str = dateFormat.format(Long.parseLong(time) * 1000);
         }
         return str;
@@ -364,6 +347,9 @@ public class StringUtils {
         return finalDate;
     }
 
+    public static String getStringfromResource(Context context,int ResourceId) {
+        return context.getResources().getString(ResourceId);
+    }
 
 
     //5.5-->5.5  5.0-->5
