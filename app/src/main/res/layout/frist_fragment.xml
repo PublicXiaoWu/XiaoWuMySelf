@@ -2,13 +2,16 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:background="#73f4eeee"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView66666666666666"
-        />
+    <com.xiaowu.myself.main.view.RecyclerCoverFlow
+        android:id="@+id/recy" android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="300dp">
 
+
+    </com.xiaowu.myself.main.view.RecyclerCoverFlow>
 </android.support.constraint.ConstraintLayout>
