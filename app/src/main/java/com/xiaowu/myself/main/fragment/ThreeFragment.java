@@ -3,12 +3,10 @@ package com.xiaowu.myself.main.fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.TextView;
 
 import com.xiaowu.myself.R;
 import com.xiaowu.myself.app.base.BaseFragment;
 import com.xiaowu.myself.main.adapter.ShoppingOnlineAdapter;
-import com.xiaowu.myself.main.mvp.contract.ShoppingOnlineContract;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -18,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
  *
  * @author LSX
  */
-public class ShoppingOnlineFragment extends BaseFragment implements ShoppingOnlineContract.View {
+public class ThreeFragment extends BaseFragment {
 
     @Override
     public int provideContentViewId() {

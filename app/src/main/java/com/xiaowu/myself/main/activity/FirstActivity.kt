@@ -5,12 +5,13 @@ import android.app.FragmentManager
 import android.app.FragmentTransaction
 import android.content.Intent
 import android.support.design.widget.TabLayout
-import android.view.View
 import com.xiaowu.myself.R
 import com.xiaowu.myself.app.base.BaseActivity
 import com.xiaowu.myself.app.base.BaseFragment
 import com.xiaowu.myself.main.adapter.ApplyAdapter
 import com.xiaowu.myself.main.fragment.FirstFragment
+import com.xiaowu.myself.main.fragment.ThreeFragment
+import com.xiaowu.myself.main.fragment.TwoFragment
 import kotlinx.android.synthetic.main.activity_first.*
 
 class FirstActivity : BaseActivity() {
@@ -28,15 +29,10 @@ class FirstActivity : BaseActivity() {
     override fun initData() {
 
         tbList?.add(FirstFragment())
-        tbList?.add(FirstFragment())
-        tbList?.add(FirstFragment())
-        tbList?.add(FirstFragment())
+        tbList?.add(TwoFragment())
+        tbList?.add(ThreeFragment())
         newapply_vp.adapter = ApplyAdapter(supportFragmentManager, tbList)
         newapply_tab.setupWithViewPager(newapply_vp)
-    }
-
-    fun go(view: View) {
-        newIntent<MainActivity>()
     }
 
 

@@ -25,8 +25,8 @@ class FragmentFactory private constructor(context: Context) {
     }
 
     private var firstFragment: FirstFragment? = null
-    private var userFragment: UserFragment? = null
-    private var threefragment: ShoppingOnlineFragment? = null
+    private var twoFragment: TwoFragment? = null
+    private var mThreefragment: ThreeFragment? = null
 
     /**
      * 首页
@@ -43,27 +43,27 @@ class FragmentFactory private constructor(context: Context) {
     }  /**
      * 首页
      */
-    fun getTwoFragment(): UserFragment {
-        if (userFragment == null) {
+    fun getTwoFragment(): TwoFragment {
+        if (twoFragment == null) {
             synchronized(FirstFragment::class) {
-                if (userFragment == null) {
-                    userFragment = UserFragment()
+                if (twoFragment == null) {
+                    twoFragment = TwoFragment()
                 }
             }
         }
-        return userFragment!!
+        return twoFragment!!
     }  /**
      * 首页
      */
-    fun getThreeFragment(): ShoppingOnlineFragment {
-        if (threefragment == null) {
+    fun getThreeFragment(): ThreeFragment {
+        if (mThreefragment == null) {
             synchronized(FirstFragment::class) {
-                if (threefragment == null) {
-                    threefragment = ShoppingOnlineFragment()
+                if (mThreefragment == null) {
+                    mThreefragment = ThreeFragment()
                 }
             }
         }
-        return threefragment!!
+        return mThreefragment!!
     }
 
 
