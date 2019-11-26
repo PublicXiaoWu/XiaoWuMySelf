@@ -34,11 +34,6 @@ public class MyGsonResponseBodyConverter<T> implements Converter<ResponseBody,T>
         String response = value.string();
         BaseResponseEntity result = mGson.fromJson(response, BaseResponseEntity.class);
 
-        //判断code可自己改动
-        if (result.code != 200) {
-            value.close();
-            throw new ApiException(result.code, result.message);
-        }
         MediaType mediaType = value.contentType();
         Charset charset = mediaType != null ? mediaType.charset(UTF_8) : UTF_8;
         ByteArrayInputStream bis = new ByteArrayInputStream(response.getBytes());
